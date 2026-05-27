@@ -1,0 +1,72 @@
+{
+  "type": "bar",
+  "data": {
+    "labels": [
+      "@middy/core + @middy/http-router",
+      "lambda-api",
+      "itty-router",
+      "hono (hono/aws-lambda)",
+      "@aws-lambda-powertools/event-handler",
+      "serverless-http (express)",
+      "@codegenie/serverless-express",
+      "@fastify/aws-lambda"
+    ],
+    "datasets": [
+      {
+        "label": "p99 (µs)",
+        "data": [
+          2.75,
+          7.208,
+          34.208,
+          32.235,
+          45.369,
+          37.636,
+          50.104,
+          98.316
+        ],
+        "backgroundColor": "__RAW__pattern.draw('diagonal-right-left', '#f97316', '#7c2d12', 22)",
+        "borderWidth": 0,
+        "grouped": false,
+        "order": 2
+      },
+      {
+        "label": "p50 (µs)",
+        "data": [
+          1.416,
+          3.917,
+          10.542,
+          12.458,
+          15.25,
+          16.542,
+          17.417,
+          36.166
+        ],
+        "backgroundColor": "#15803d",
+        "borderWidth": 0,
+        "grouped": false,
+        "order": 1
+      }
+    ]
+  },
+  "options": {
+    "indexAxis": "y",
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "HTTP Event (Real World) — latency (µs, lower is better)"
+      },
+      "legend": {
+        "position": "top"
+      }
+    },
+    "scales": {
+      "x": {
+        "beginAtZero": true,
+        "title": {
+          "display": true,
+          "text": "latency (µs)"
+        }
+      }
+    }
+  }
+}

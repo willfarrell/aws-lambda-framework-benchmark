@@ -1,0 +1,57 @@
+{
+  "type": "bar",
+  "data": {
+    "labels": [
+      "@middy/core (event-batch-handler + event-batch-parser)",
+      "@aws-lambda-powertools/batch (BatchProcessor)",
+      "@codegenie/serverless-express (eventSourceRoutes)"
+    ],
+    "datasets": [
+      {
+        "label": "p99 (µs)",
+        "data": [
+          2.584,
+          5.791,
+          20.583
+        ],
+        "backgroundColor": "__RAW__pattern.draw('diagonal-right-left', '#f97316', '#7c2d12', 22)",
+        "borderWidth": 0,
+        "grouped": false,
+        "order": 2
+      },
+      {
+        "label": "p50 (µs)",
+        "data": [
+          1.458,
+          3.25,
+          10.834
+        ],
+        "backgroundColor": "#15803d",
+        "borderWidth": 0,
+        "grouped": false,
+        "order": 1
+      }
+    ]
+  },
+  "options": {
+    "indexAxis": "y",
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "SQS Event — latency (µs, lower is better)"
+      },
+      "legend": {
+        "position": "top"
+      }
+    },
+    "scales": {
+      "x": {
+        "beginAtZero": true,
+        "title": {
+          "display": true,
+          "text": "latency (µs)"
+        }
+      }
+    }
+  }
+}

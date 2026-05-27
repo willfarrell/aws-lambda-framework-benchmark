@@ -1,0 +1,72 @@
+{
+  "type": "bar",
+  "data": {
+    "labels": [
+      "@middy/core + @middy/http-router",
+      "lambda-api",
+      "itty-router",
+      "hono (hono/aws-lambda)",
+      "@codegenie/serverless-express",
+      "serverless-http (express)",
+      "@aws-lambda-powertools/event-handler",
+      "@fastify/aws-lambda"
+    ],
+    "datasets": [
+      {
+        "label": "p99 (µs)",
+        "data": [
+          1.25,
+          45.939,
+          83.247,
+          86.709,
+          229.625,
+          416.087,
+          160.786,
+          810.084
+        ],
+        "backgroundColor": "__RAW__pattern.draw('diagonal-right-left', '#f97316', '#7c2d12', 22)",
+        "borderWidth": 0,
+        "grouped": false,
+        "order": 2
+      },
+      {
+        "label": "p50 (µs)",
+        "data": [
+          0.542,
+          4.5,
+          12.833,
+          14.625,
+          19.792,
+          20.917,
+          22,
+          30.542
+        ],
+        "backgroundColor": "#15803d",
+        "borderWidth": 0,
+        "grouped": false,
+        "order": 1
+      }
+    ]
+  },
+  "options": {
+    "indexAxis": "y",
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "REST Event — latency (µs, lower is better)"
+      },
+      "legend": {
+        "position": "top"
+      }
+    },
+    "scales": {
+      "x": {
+        "beginAtZero": true,
+        "title": {
+          "display": true,
+          "text": "latency (µs)"
+        }
+      }
+    }
+  }
+}

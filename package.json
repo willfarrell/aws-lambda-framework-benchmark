@@ -1,0 +1,51 @@
+{
+  "name": "aws-lambda-framework-benchmark",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lambda wrapper ops/sec benchmark: HTTP Event, HTTP Event (w/ Stream Response), SNS Event scenarios via tinybench (in-process)",
+  "scripts": {
+    "bench": "node bench.js",
+    "bench:rest": "node bench.js rest",
+    "bench:http": "node bench.js http",
+    "bench:http-real-world": "node bench.js http-real-world",
+    "bench:http-stream": "node bench.js http-stream",
+    "bench:sqs": "node bench.js sqs",
+    "bench:sns": "node bench.js sns",
+    "bench:docker": "bash bench-lambda.sh",
+    "bench:docker:rest": "bash bench-lambda.sh rest",
+    "bench:docker:http": "bash bench-lambda.sh http",
+    "bench:docker:http-real-world": "bash bench-lambda.sh http-real-world",
+    "bench:docker:http-stream": "bash bench-lambda.sh http-stream",
+    "bench:docker:sqs": "bash bench-lambda.sh sqs",
+    "bench:docker:sns": "bash bench-lambda.sh sns",
+    "bench:docker:canonical": "MEM=512 bash bench-lambda.sh",
+    "sources": "node lib/sources.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/batch": "2.33.0",
+    "@aws-lambda-powertools/event-handler": "^2.0.0",
+    "@aws-lambda-powertools/parser": "2.33.0",
+    "@codegenie/serverless-express": "^5.0.0",
+    "@fastify/aws-lambda": "^6.0.0",
+    "@hono/zod-validator": "0.8.0",
+    "@middy/core": "^7.0.0",
+    "@middy/event-batch-handler": "7.5.0",
+    "@middy/event-batch-parser": "7.5.0",
+    "@middy/http-error-handler": "7.6.3",
+    "@middy/http-json-body-parser": "7.6.3",
+    "@middy/http-router": "^7.0.0",
+    "@middy/validator": "7.6.3",
+    "express": "^5.0.0",
+    "fastify": "^5.0.0",
+    "hono": "^4.0.0",
+    "itty-router": "^5.0.0",
+    "lambda-api": "^1.0.0",
+    "serverless-http": "^4.0.0",
+    "tinybench": "^6.0.0",
+    "zod": "4.4.3"
+  }
+}
